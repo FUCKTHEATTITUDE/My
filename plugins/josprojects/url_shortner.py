@@ -23,7 +23,7 @@ from pyshorteners import Shortener
 BITLY_API = os.environ.get("BITLY_API", "8df1df8c23f719e5cf97788cc2d40321ea30092b")
 CUTTLY_API = os.environ.get("CUTTLY_API", "f64dffbde033b6c307387dd50b7c76e505f1c")
 SHORTCM_API = os.environ.get("SHORTCM_API", "pk_...NIZv")
-GPLINKS_API = os.environ.get("GPLINKS_API", "008ccaedd6061ad1948838f410947603de9007a7")
+GPLINKS_API = os.environ.get("GPLINKS_API", "04e8ee10b5f123456a640c8f33195abc")
 
 reply_markup = InlineKeyboardMarkup(
         [[
@@ -178,7 +178,7 @@ async def short(link):
     
     # GPLinks shorten
     try:
-        api_url = "https://gplinks.in/api"
+        api_url = "https://TGLink.in/member/tools/api"
         params = {'api': GPLINKS_API, 'url': link}
         async with aiohttp.ClientSession() as session:
             async with session.get(api_url, params=params, raise_for_status=True) as response:
